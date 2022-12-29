@@ -1,0 +1,80 @@
+<!doctype html>
+<head>
+    <title>
+        Gear Animation
+    </title>
+    <style>
+        .container{
+            width:300px;
+            height: 300px;
+            margin: auto;
+            position: relative;
+        }
+        
+        
+        
+        img{
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            opacity: 0.35;
+            border-radius: 50%;
+           
+            
+        }
+        .img-clock-rotate{
+/*             animation-timing-function: linear;*/
+            animation: rotate-clock 5s linear  forwards;
+            animation-iteration-count: infinite;
+        }
+        
+        .img-anti-clock-rotate{
+/*             animation-timing-function: linear;*/
+            animation: rotate-anti-clock 5s linear  forwards;
+            animation-iteration-count: infinite;
+        }        
+        .abs-image{
+            position: absolute;
+            left: 0px;
+            top: 280px;
+            transform: rotate(15deg);
+        }
+        
+        @keyframes rotate-clock{
+            25%{
+                transform: rotate(90deg);
+            }
+            50%{
+                transform: rotate(180deg);
+            }
+            75%{
+                transform: rotate(270deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes rotate-anti-clock{
+            25%{
+                transform: rotate(-75deg);
+            }
+            50%{
+                transform: rotate(-165deg);
+            }
+            75%{
+                transform: rotate(-255deg);
+            }
+            100%{
+                transform: rotate(-345deg);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+    <img class="img-clock-rotate" src="gear-icon-805253.jpg" >
+    <img class="abs-image img-anti-clock-rotate" src="gear-icon-805253.jpg" >
+    </div>
+</body>
