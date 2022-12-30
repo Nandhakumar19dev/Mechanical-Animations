@@ -1,0 +1,220 @@
+<!doctype html>
+<head>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            
+            padding: 25% 0 0 25%;
+            display: flex;
+/*            height: 500px;*/
+            
+/*            border: 1px solid red;*/
+        }
+        
+        .container2{
+            padding-left:25%;   
+/*            border: 1px solid black;*/
+        }
+        
+        .support{
+            height: 75px;
+            width: 6px;
+            background: #A569BD;
+
+/*            margin: auto ;*/
+            border-radius: 3px;
+        }
+        
+        .piston{
+            height: 150px;
+            width: 9px;
+
+            background: #1F618D;
+            border-radius: 4.5px;
+/*            transform: translateY(45px);*/
+/*            transform: translateY(-20px);*/
+            transform: translateY(-45.0px);
+            animation: linear-up-down 5s linear forwards;
+            animation-iteration-count: infinite;
+            opacity: 0.3;
+            
+        }
+        
+        .rod{
+            position: relative;
+            left: 6px;
+            top: -60px;
+            width: 9px;
+            height: 45px;
+            background: #212F3D;
+            border-radius: 4.5px;
+            
+            transform-origin: bottom center;
+            transform: rotate(0.0deg);
+            animation: rotate-rod 5s linear forwards;
+            animation-iteration-count: infinite;            
+
+        }
+        .connecting-rod{
+            position: relative;
+            left: 6px;
+            height: 135px;
+            width: 9px;
+            top: -55px;
+            background: #512E5F;
+            border-radius: 4.5px;
+            opacity: 0.1;
+            animation: connecting-rod-motion 5s linear forwards;
+             animation-iteration-count: infinite;
+            
+        }
+        
+        @keyframes linear-up-down{
+            0%{
+                transform: translateY(-45.0px);}
+              8%{
+                transform: translateY(-39.433800601973864px);}
+              16%{
+                transform: translateY(-24.112205774054843px);}
+              25%{
+                transform: translateY(-2.7554552980815448e-15px);}
+              33%{
+                transform: translateY(21.678915334577177px);}
+              41%{
+                transform: translateY(37.99475664759068px);}
+              50%{
+                transform: translateY(45.0px);}
+              58%{
+                transform: translateY(39.433800601973864px);}
+              66%{
+                transform: translateY(24.11220577405487px);}
+              75%{
+                transform: translateY(8.266365894244634e-15px);}
+              83%{
+                transform: translateY(-21.67891533457721px);}
+              91%{
+                transform: translateY(-37.994756647590684px);}
+              100%{
+                transform: translateY(-45.0px);}
+
+
+        }
+        
+        @keyframes rotate-rod{
+             0%{
+                transform: rotate(0.0deg);
+                transform-origin: bottom center;}
+              8%{
+                transform: rotate(28.8deg);
+                transform-origin: bottom center;}
+              16%{
+                transform: rotate(57.6deg);
+                transform-origin: bottom center;}
+              25%{
+                transform: rotate(90.0deg);
+                transform-origin: bottom center;}
+              33%{
+                transform: rotate(118.8deg);
+                transform-origin: bottom center;}
+              41%{
+                transform: rotate(147.6deg);
+                transform-origin: bottom center;}
+              50%{
+                transform: rotate(180.0deg);
+                transform-origin: bottom center;}
+              58%{
+                transform: rotate(208.8deg);
+                transform-origin: bottom center;}
+              66%{
+                transform: rotate(237.6deg);
+                transform-origin: bottom center;}
+              75%{
+                transform: rotate(270.0deg);
+                transform-origin: bottom center;}
+              83%{
+                transform: rotate(298.8deg);
+                transform-origin: bottom center;}
+              91%{
+                transform: rotate(327.6deg);
+                transform-origin: bottom center;}
+              100%{
+                transform: rotate(360.0deg);
+                transform-origin: bottom center;}
+        }
+        
+
+        @keyframes connecting-rod-motion{
+            
+            
+            
+             0%{
+                transform: translateY(0.0px) rotate(0.0deg);
+                transform-origin: top center;
+               }
+                  
+              8%{
+                transform: translateY(5.566199398026136px) rotate(-9.987383695374957deg) ;
+                transform-origin: top center;
+            }
+              16%{
+                transform: translateY(20.887794225945157px) rotate(-17.69548887689718deg);
+                transform-origin: top center;
+
+            }
+              25%{
+                transform: translateY(45.0px) rotate(-21.10019602409302deg);
+                transform-origin: top center;
+            }
+              33%{
+                transform: translateY(66.67891533457717px) rotate(-18.38921403145706deg);
+                transform-origin: top center;
+
+            }
+              41%{
+                transform: translateY(82.99475664759068px) rotate(-11.1219360330404deg);
+                transform-origin: top center;
+
+            }
+              50%{
+                transform: translateY(90.0px) rotate(-2.5260153474725556e-15deg);
+                transform-origin: top center;
+
+            }
+              58%{
+                transform: translateY(84.43380060197387px) rotate(9.987383695374957deg);
+                transform-origin: top center;}
+              66%{
+                transform: translateY(69.11220577405487px) rotate(17.695488876897173deg) ;
+                transform-origin: top center;}
+              75%{
+                transform: translateY(45.00000000000001px) rotate(21.10019602409302deg);
+                transform-origin: top center;}
+              83%{
+                transform: translateY(23.32108466542279px) rotate(18.38921403145705deg);
+                transform-origin: top center;}
+              91%{
+                transform: translateY(7.005243352409316px) rotate(11.121936033040393deg);
+                transform-origin: top center;}
+              100%{
+                transform: translateY(0.0px) rotate(5.052030694945111e-15deg);
+                transform-origin: top center;}
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="support support-left"></div>
+        <div class="piston"></div>
+        <div class="support support-right"></div>
+       
+    </div>
+    <div class="container2">
+         <div class="connecting-rod"></div>
+         <div class="rod"></div>
+    </div>
+</body>
